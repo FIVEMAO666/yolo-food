@@ -11,7 +11,7 @@ def success(name):
    return render_template("pridet.html",user_image = img)
 
 
-@app.route('/jm',methods = ['POST', 'GET'])
+@app.route('/food-find',methods = ['POST', 'GET'])
 def login():
    if request.method == 'POST':
       user = request.form['myfile']

@@ -17,8 +17,8 @@ from PIL import Image
 
 if __name__ == '__main__':
     list = []
-    img_save = 'E:/pycharm/yolo3-keras/s'
-    path = 'E:/pycharm/yolo3-keras/save'
+    img_save = 'D:/study/Web/untitled/big work-food/image-food/ice'
+    path = 'D:/study/Web/untitled/big work-food/image-food/ice'
     # top_size, bottom_size, left_size, right_size = (250, 250, 250, 250)
     img_path = os.listdir(path)
     for i in range(len(img_path)-2):
@@ -38,6 +38,6 @@ if __name__ == '__main__':
 
         image = np.array(image)
         # img = cv2.copyMakeBorder(img, top_size, bottom_size, left_size, right_size, borderType=cv2.BORDER_REPLICATE)
-        img = cv2.resize(image, (416, 416))
+        img = cv2.resize(image, (247, 150))
         cv2.imwrite(save_path, img)
 

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美食天下</title>
+    <link rel="stylesheet" href="food-style.css">
+</head>
+<body>
+<!--  头顶部分  -->
+<header>
+    <nav>
+    <!--  log部分  -->
+        <div class="log">
+            <img src="image-food/top2.png" alt="">
+        </div>
+
+        <!--  log部分  -->
+        <div class="navbar">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">社区</a></li>
+                <li><a href="#">评论</a></li>
+            </ul>
+        </div>
+
+        <!--   搜索栏     -->
+        <div class="search">
+            <form action="">
+                <input type="text" value="请输入你想要的食物">
+                <input type="submit" value="">
+            </form>
+        </div>
+        <!--   搜索栏     -->
+
+        <div class="find">
+            <a href="food-find.html">食物识别系统</a>
+
+        </div>
+
+    </nav>
+</header>
+<!--  头顶部分  -->
+
+
+
+<div class="top-left">
+    <a href="#top1">↑</a>
+</div>
+
+<script>
+    var btn = document.querySelector('.top-left');
+    btn.onmouseover = function () {
+        console.log(123)
+        this.className = 'top-left-change'
+    }
+    btn.onmouseout = function () {
+        this.className = 'top-left'
+    }
+
+</script>
+
+<!--   banner 部分-->
+<div class="banner">
+    <div class="container center-banner">
+<!--   左侧导航栏     -->
+        <div class="left-banner">
+            <ul>
+                <li>汉堡</li>
+                <li>饺子</li>
+                <li>面条</li>
+                <li>蛋糕</li>
+                <li>牛排</li>
+                <li>雪糕</li>
+            </ul>
+        </div>
+
+
+        <!--   左侧导航栏     -->
+    </div>
+    <script>
+        var lis = document.querySelectorAll('li');
+        var photo = document.querySelector('.center-banner');
+        for (var i =0;i<lis.length;i++) {
+            lis[i].setAttribute('index',i);
+            lis[i].onclick = function () {
+                for (var i = 0;i<lis.length;i++) {
+                    lis[i].className = ''
+                }
+                this.className = 'current';
+                var index = this.getAttribute('index');
+                photo.style.background = 'url(image-food/banner/' + index +'.jpg) no-repeat 200px center' ;
+
+            }
+        }
+    </script>
+</div>
+<!--   banner 部分-->
+
+<!--  top部分-->
+<div class="top container" id="top1">
+    <ul>
+        <a href="#main-ZC">中餐</a>
+        <a href="#main-XC">西餐</a>
+        <a href="#main-sweet">甜品</a>
+        <a href="#main-RL">日料</a>
+        <a href="#">东南亚菜</a>
+        <a href="#">烧烤</a>
+    </ul>
+
+</div>
+
+<!--  top部分-->
+
+
+
+<!--main部分-->
+<div class="main container">
+    <div id="main-ZC">
+        <h2>中餐</h2>
+    </div>
+    <div class="main-dump">
+        <h4>饺子</h4>
+        <a href="#">更多></a>
+    </div>
+    <div class="main-dump-photo clearfix">
+        <ul>
+            <li><img src="image-food/main/dump/1.jpg" alt="">
+                <h5>饺子又称水饺，深受中国人民喜爱，是中国北方民间的主食和地方小吃。</h5>
+            </li>
+            <li><img src="image-food/main/dump/2.jpg" alt="">
+                <h5>饺子又称水饺，深受中国人民喜爱，是中国北方民间的主食和地方小吃。</h5>
+            </li>
+            <li><img src="image-food/main/dump/3.jpg" alt="">
+                <h5>饺子又称水饺，深受中国人民喜爱，是中国北方民间的主食和地方小吃。</h5>
+            </li>
+            <li><img src="image-food/main/dump/4.jpg" alt="">
+                <h5>饺子又称水饺，深受中国人民喜爱，是中国北方民间的主食和地方小吃。</h5>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-nood">
+        <h4>面条</h4>
+        <a href="#">更多></a>
+    </div>
+    <div class="main-nood-photo clearfix">
+        <ul>
+            <li><img src="image-food/main/nood/1.jpg" alt="">
+                <h5>面条是一种制作简单，食用方便，营养丰富，即可作为主食又可作为快餐的健康保健食品。</h5>
+            </li>
+            <li><img src="image-food/main/nood/2.jpg" alt="">
+                <h5>面条是一种制作简单，食用方便，营养丰富，即可作为主食又可作为快餐的健康保健食品。</h5>
+            </li>
+            <li><img src="image-food/main/nood/3.jpg" alt="">
+                <h5>面条是一种制作简单，食用方便，营养丰富，即可作为主食又可作为快餐的健康保健食品。</h5>
+            </li>
+            <li><img src="image-food/main/nood/4.jpg" alt="">
+                <h5>面条是一种制作简单，食用方便，营养丰富，即可作为主食又可作为快餐的健康保健食品。</h5>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <div class="main-XC" id="main-XC">
+        <h2>西餐</h2>
+    </div>
+    <div class="main-beef">
+        <h4>牛排</h4>
+        <a href="#">更多></a>
+    </div>
+    <div class="main-beef-photo clearfix">
+        <ul>
+            <li><img src="image-food/main/beef/1.jpg" alt="">
+                <h5>牛排，或称牛扒，是片状的牛肉，是西餐中常见的食物之一。</h5>
+            </li>
+            <li><img src="image-food/main/beef/2.jpg" alt="">
+                <h5>牛排，或称牛扒，是片状的牛肉，是西餐中常见的食物之一。</h5>
+            </li>
+            <li><img src="image-food/main/beef/3.jpg" alt="">
+                <h5>牛排，或称牛扒，是片状的牛肉，是西餐中常见的食物之一。</h5>
+            </li>
+            <li><img src="image-food/main/beef/4.jpg" alt="">
+                <h5>牛排，或称牛扒，是片状的牛肉，是西餐中常见的食物之一。</h5>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-hg">
+        <h4>汉堡</h4>
+        <a href="#">更多></a>
+    </div>
+    <div class="main-hg-photo clearfix">
+        <ul>
+            <li><img src="image-food/main/hg/1.jpg" alt="">
+                <h5>汉堡包热量高，含有大量脂肪，所以不适合减肥人群或高血压高血脂人群过量食用。</h5>
+            </li>
+            <li><img src="image-food/main/hg/2.jpg" alt="">
+                <h5>汉堡包热量高，含有大量脂肪，所以不适合减肥人群或高血压高血脂人群过量食用。</h5>
+            </li>
+            <li><img src="image-food/main/hg/3.jpg" alt="">
+                <h5>汉堡包热量高，含有大量脂肪，所以不适合减肥人群或高血压高血脂人群过量食用。</h5>
+            </li>
+            <li><img src="image-food/main/hg/4.jpg" alt="">
+                <h5>汉堡包热量高，含有大量脂肪，所以不适合减肥人群或高血压高血脂人群过量食用。</h5>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="main-XC" id="main-sweet">
+        <h2>甜品</h2>
+    </div>
+    <div class="main-beef">
+        <h4>雪糕</h4>
+        <a href="#">更多></a>
+    </div>
+    <div class="main-beef-photo clearfix">
+        <ul>
+            <li><img src="image-food/main/ice/1.jpg" alt="">
+                <h5>雪糕是以砂糖、奶粉、鸡蛋、香精、淀粉、麦芽粉、明胶等为主要原料</h5>
+            </li>
+            <li><img src="image-food/main/ice/2.jpg" alt="">
+                <h5>雪糕是以砂糖、奶粉、鸡蛋、香精、淀粉、麦芽粉、明胶等为主要原料</h5>
+            </li>
+            <li><img src="image-food/main/ice/3.jpg" alt="">
+                <h5>雪糕是以砂糖、奶粉、鸡蛋、香精、淀粉、麦芽粉、明胶等为主要原料</h5>
+            </li>
+            <li><img src="image-food/main/ice/4.jpg" alt="">
+                <h5>雪糕是以砂糖、奶粉、鸡蛋、香精、淀粉、麦芽粉、明胶等为主要原料</h5>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-hg">
+        <h4>蛋糕</h4>
+        <a href="#">更多></a>
+    </div>
+    <div class="main-hg-photo clearfix">
+        <ul>
+            <li><img src="image-food/main/cake/1.jpg" alt="">
+                <h5>蛋糕是用鸡蛋、白糖、小麦粉为主要原料</h5>
+            </li>
+            <li><img src="image-food/main/cake/2.jpg" alt="">
+                <h5>蛋糕是用鸡蛋、白糖、小麦粉为主要原料</h5>
+            </li>
+            <li><img src="image-food/main/cake/3.jpg" alt="">
+                <h5>蛋糕是用鸡蛋、白糖、小麦粉为主要原料</h5>
+            </li>
+            <li><img src="image-food/main/cake/4.jpg" alt="">
+                <h5>蛋糕是用鸡蛋、白糖、小麦粉为主要原料</h5>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="main-XC" id="main-RL">
+        <h2>日料</h2>
+    </div>
+    <div class="main-beef">
+        <h4>寿司</h4>
+        <a href="#">更多></a>
+    </div>
+    <div class="main-beef-photo clearfix">
+        <ul>
+            <li><img src="image-food/main/sushi/1.jpg" alt="">
+                <h5>寿司是一种日本传统美食，是用盐和米腌制的咸鱼，后经演变形成如今的寿司</h5>
+            </li>
+            <li><img src="image-food/main/sushi/2.jpg" alt="">
+                <h5>寿司是一种日本传统美食，是用盐和米腌制的咸鱼，后经演变形成如今的寿司</h5>
+            </li>
+            <li><img src="image-food/main/sushi/3.jpg" alt="">
+                <h5>寿司是一种日本传统美食，是用盐和米腌制的咸鱼，后经演变形成如今的寿司</h5>
+            </li>
+            <li><img src="image-food/main/sushi/4.jpg" alt="">
+                <h5>寿司是一种日本传统美食，是用盐和米腌制的咸鱼，后经演变形成如今的寿司</h5>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-hg">
+        <h4>刺身</h4>
+        <a href="#">更多></a>
+    </div>
+    <div class="main-hg-photo clearfix">
+        <ul>
+            <li><img src="image-food/main/sashimi/1.jpg" alt="">
+                <h5 style="line-height: 30px">刺身就是指鱼生之类的东西，指将新鲜的鱼贝类生切成片</h5>
+            </li>
+            <li><img src="image-food/main/sashimi/2.jpg" alt="">
+                <h5 style="line-height: 30px">刺身就是指鱼生之类的东西，指将新鲜的鱼贝类生切成片</h5>
+            </li>
+            <li><img src="image-food/main/sashimi/3.jpg" alt="">
+                <h5 style="line-height: 30px">刺身就是指鱼生之类的东西，指将新鲜的鱼贝类生切成片</h5>
+            </li>
+            <li><img src="image-food/main/sashimi/4.jpg" alt="">
+                <h5 style="line-height: 30px">刺身就是指鱼生之类的东西，指将新鲜的鱼贝类生切成片</h5>
+            </li>
+        </ul>
+    </div>
+
+    
+    
+    
+    
+    
+    
+</div>
+<!--main部分-->
+
+<script>
+    var top = document.querySelector('.top').querySelectorAll('a');
+    for (var i =0;i<top.length;i++) {
+        top[i].onclick = function () {
+            console.log('123');
+        }
+    }
+</script>
+
+
+
+
+<!--bottom部分-->
+<footer>
+    <div class="container footer-in">
+        <div class="footer-l">
+            <img src="image-food/top2.png" alt="">
+            <p>i撒旦教师节都没法方面积累按法律方面，<br>阿拉驸马两分马琳
+                askfmjakfmakfm啊师傅卡吗</p>
+            <a href="#">下载app</a>
+        </div>
+        <div class="footer-r">
+            <dl>
+                <dt>关于美食网</dt>
+                <dd><a href="">关于</a></dd>
+                <dd><a href="">电话</a></dd>
+                <dd><a href="">合作</a></dd>
+                <dd><a href="">图片</a></dd>
+                <dd><a href="">帮助</a></dd>
+            </dl>
+            <dl>
+                <dt>关于美食网</dt>
+                <dd><a href="">水果</a></dd>
+                <dd><a href="">蔬菜</a></dd>
+                <dd><a href="">生产</a></dd>
+                <dd><a href="">流程</a></dd>
+                <dd><a href="">帮助</a></dd>
+            </dl>
+
+        </div>
+    </div>
+</footer>
+<!--bottom部分-->
+</body>
+</html>
